@@ -1,5 +1,6 @@
 package com.jd.xq.spring.bean;
 
+
 /**
  * @author duanxiaoqiu
  * @Date 2019-12-27 11:54
@@ -7,6 +8,8 @@ package com.jd.xq.spring.bean;
 public class Person {
     private String name;
     private int age;
+
+
 
     public String getName() {
         return name;
