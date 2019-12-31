@@ -1,14 +1,17 @@
 package com.jd.xq.spring.bean;
 
 
+import com.jd.xq.spring.annotation.YhdResource;
+
 /**
  * @author duanxiaoqiu
  * @Date 2019-12-27 11:54
  **/
 public class Person {
+    @YhdResource(value = "xq")
     private String name;
-    private int age;
-
+    @YhdResource(value = "12")
+    private String age;
 
 
     public String getName() {
@@ -19,11 +22,11 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 }

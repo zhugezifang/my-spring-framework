@@ -1,6 +1,7 @@
 package com.jd.xq.spring;
 
 import com.jd.xq.spring.bean.Person;
+import com.jd.xq.spring.context.XqAnnotationClassPathXmlApplicationContext;
 import com.jd.xq.spring.context.XqClassPathXmlApplicationContext;
 
 /**
@@ -9,8 +10,12 @@ import com.jd.xq.spring.context.XqClassPathXmlApplicationContext;
  **/
 public class SpringMain {
     public static void main(String[] args) {
-        XqClassPathXmlApplicationContext xqClassPathXmlApplicationContext=new XqClassPathXmlApplicationContext("spring.xml");
+        /*XqClassPathXmlApplicationContext xqClassPathXmlApplicationContext=new XqClassPathXmlApplicationContext("spring.xml");
         Person person=(Person) xqClassPathXmlApplicationContext.getBean("person");
+        System.out.println(person.getName());*/
+
+        XqAnnotationClassPathXmlApplicationContext xqAnnotationClassPathXmlApplicationContext = new XqAnnotationClassPathXmlApplicationContext("spring.xml");
+        Person person = (Person) xqAnnotationClassPathXmlApplicationContext.getBean("person");
         System.out.println(person.getName());
     }
 }
